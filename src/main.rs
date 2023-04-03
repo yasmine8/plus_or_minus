@@ -6,10 +6,9 @@ fn main() {
     println!("guess the number!");
     
     let secret_number = rand::thread_rng().gen_range(1..101);
-    let mut strokes = 0;
-    //println!("the secret number is {secret_number}");
+    let mut strokes = 1;
+    println!("the secret number is {secret_number}");
     loop {
-        strokes +=1;
         println!("please insert a number between 1 and 100:");
         let mut supposition = String::new();
         
@@ -31,5 +30,7 @@ fn main() {
                 break;
             },
         }
+        strokes +=1;
+
     }      
 }
